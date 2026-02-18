@@ -132,7 +132,7 @@ def generateCompound(w, ws):
         
         if debug: sys.stderr.write( "NONE: "+w+"\n")
         return None
-    nws_sorted = sorted(nws, cmp=bylength, reverse=True)
+    nws_sorted = sorted(nws, key=len, reverse=True)
     #get split points
     splits=set()
     for n in nws_sorted:
